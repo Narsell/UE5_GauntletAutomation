@@ -21,7 +21,7 @@ The test artifacts consist mainly of the log of the build's runtime executable (
 
   **Test Artifacts:**
     * GIF generated showing the test execution<br>
-      ![Test Execution Gif Artifact](artifacts/ClientTest.gif)
+      ![Test Execution Gif Artifact](showcase_artifacts/ClientTest.gif)
     * Runtime executable log<br>
-      ![alt text](artifacts/image.png)
+      ![alt text](showcase_artifacts/image.png)
 
