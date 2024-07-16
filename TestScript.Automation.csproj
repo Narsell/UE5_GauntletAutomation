@@ -9,6 +9,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\AutomationTool\AutomationUtils\AutomationUtils.Automation.csproj" />
+    <ProjectReference Include="..\AutomationTool\Gauntlet\Gauntlet.Automation.csproj" />
   </ItemGroup>
 
 </Project>

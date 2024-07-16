@@ -1,40 +1,29 @@
 using AutomationTool;
+using Gauntlet;
 
 namespace TestScript.Automation
 {
-	// Use [Help()] attributes to document your command and its arguments.
-	[Help("Sample script printing the first N terms of the Fibonacci sequence.")]
-	[Help("Usage: SampleScript -Terms=<N>")]
-	[Help("Terms=<N>", "N (int) the number of terms to compute. Must be greater than or equal to 1.")]
-
-	// BuildCommand is the base class for all commands.
-	public class SampleCommand : BuildCommand
+	public class WinnerTeamTest : UnrealTestNode<UnrealTestConfiguration>
 	{
-		public override void ExecuteBuild()
+		public WinnerTeamTest(UnrealTestContext InContext)
+			: base(InContext)
 		{
-			// The ParseParamInt() method retrieves a command line argument for this example.
-			// ParseParam() retrieves a bool, and ParseParamValue() retrieves a string.
-			int NumTerms = ParseParamInt("Terms");
-			if (NumTerms < 1)
-			{
-				throw new ArgumentException("Invalid number of terms specified. Enter -help for syntax.");
-			}
-			else
-			{
-				LogInformation("Fibonacci sequence:");
+		}
 
-				int TermA = 1;
-				int TermB = 1;
+		public override UnrealTestConfiguration GetConfiguration()
+		{
+			UnrealTestConfiguration Config = base.GetConfiguration();
 
-				for (int i = 0; i < NumTerms; i++)
-				{
-					LogInformation(" {0}", TermA);
+			// Get a single client
+			UnrealTestRole ClientRole = Config.RequireRole(UnrealTargetRole.Client);
 
-					int TermC = TermA + TermB;
-					TermA = TermB;
-					TermB = TermC;
-				}
-			}
+			// Adding custom controller in charge of puppetering the game to test a particular outcome
+			ClientRole.Controllers.Add("SimpleController");
+
+			// Maximum timeout time for the test to run
+			Config.MaxDuration = 300;
+
+			return Config;
 		}
 	}
 }
