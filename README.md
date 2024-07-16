@@ -28,4 +28,4 @@ The test artifacts consist mainly of the log of the build's runtime executable (
 ---
 
 ### Video showcasing a test execution
-<video src='https://raw.githubusercontent.com/Narsell/UE5_GauntletAutomation/main/showcase_artifacts/GauntletShowcaseVideo.mp4' width=720></video>
+[![Gauntlet Showcase Video](https://raw.githubusercontent.com/Narsell/UE5_GauntletAutomation/main/showcase_artifacts/GauntletShowCaseVideo_thumbnail.png)](https://raw.githubusercontent.com/Narsell/UE5_GauntletAutomation/main/showcase_artifacts/GauntletShowcaseVideo.mp4)
