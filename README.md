@@ -28,4 +28,4 @@ The test artifacts consist mainly of the log of the build's runtime executable (
 ---
 
 ### Video showcasing a test execution
-<video src='showcase_artifacts/GauntletShowcaseVideo.mp4' width=720/>
+<video src='showcase_artifacts/GauntletShowcaseVideo.mp4' width=720></video>
