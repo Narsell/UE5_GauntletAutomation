@@ -10,6 +10,8 @@ namespace TestScript.Automation
 		{
 		}
 
+		private String ControllerName = "WinnerTeamController";
+
 		public override UnrealTestConfiguration GetConfiguration()
 		{
 			UnrealTestConfiguration Config = base.GetConfiguration();
@@ -18,7 +20,7 @@ namespace TestScript.Automation
 			UnrealTestRole ClientRole = Config.RequireRole(UnrealTargetRole.Client);
 
 			// Adding custom controller in charge of puppetering the game to test a particular outcome
-			ClientRole.Controllers.Add("SimpleController");
+			ClientRole.Controllers.Add(ControllerName);
 
 			// Maximum timeout time for the test to run
 			Config.MaxDuration = 300;
