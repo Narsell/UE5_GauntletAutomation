@@ -25,3 +25,7 @@ The test artifacts consist mainly of the log of the build's runtime executable (
     * Runtime executable log<br>
       ![alt text](showcase_artifacts/image.png)
 
+---
+
+### Video showcasing a test execution
+[![Gauntlet Showcase Video](https://raw.githubusercontent.com/Narsell/UE5_GauntletAutomation/main/showcase_artifacts/GauntletShowCaseVideo_thumbnail.png)](https://raw.githubusercontent.com/Narsell/UE5_GauntletAutomation/main/showcase_artifacts/GauntletShowcaseVideo.mp4)
